@@ -7,7 +7,7 @@ def client():
     with app.test_client() as client:
         yield client
 
-def hello_world(client):
+def test_hello_world(client):
     rv = client.get('/')
     assert rv.data == b'Hello, World!'
 
